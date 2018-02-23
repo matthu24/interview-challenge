@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import configureStore from './store/store';
+import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-//   ReactDOM.render(<MyApp />, document.getElementById('app-display')); //OR 'root'
+  const store = configureStore();
+  let root = document.getElementById('root');
+
+  ReactDOM.render(<Root store={store} />, root); //OR 'root'
 });
