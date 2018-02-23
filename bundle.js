@@ -25815,11 +25815,7 @@ var Nav = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'nav-left' },
-          _react2.default.createElement(
-            'div',
-            null,
-            'H'
-          )
+          _react2.default.createElement('img', { src: 'logo-symbol.svg', className: 'logo' })
         ),
         _react2.default.createElement(
           'div',

@@ -3,6 +3,10 @@ body{
   font-family: 'Source Serif Pro', serif;
 }
 
+.logo{
+  height: 33px;
+}
+
 a{
   text-decoration: none;
 }

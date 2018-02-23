@@ -10,7 +10,8 @@ class Nav extends React.Component{
       <div className='nav'>
 
         <div className='nav-left'>
-          <div>H</div>
+
+          <img src="logo-symbol.svg" className='logo'/>
         </div>
 
         <div className='nav-right'>
