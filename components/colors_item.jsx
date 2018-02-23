@@ -17,10 +17,11 @@ class ColorsItem extends React.Component{
     let id = this.props.id;
     return(
       <div className='swatch-bundle'>
-        <Link to='/detail'>
+        <Link params={{ testvalue: "hello" }} to={`/detail/${this.props.color}`}>
           <div style={{backgroundColor:color}} className='swatch-item'></div>
           <div className='swatch-name'>
             {color}
+
           </div>
         </Link>
       </div>

@@ -12,7 +12,7 @@ const App = () => (
 
     <Switch>
       <Route exact path = "/" component={ColorsIndex}/>
-      <Route exact path = "/detail" component={ColorsShowContainer}/>
+      <Route exact path = "/detail/:colorId" component={ColorsShowContainer}/>
 
     </Switch>
   </div>

@@ -13,14 +13,17 @@ class ColorsIndex extends React.Component{
     }
     return(
       <div className='index1'>
-        <ul className='swatch-list1'>
-          {
-            colorArray.map((color,idx) => (
-              <ColorsItem key={idx} id={idx} color={color}/>
-            ))
-          }
-        </ul>
-        <div>1 2 3 4</div>
+        <div className='index1-components'>
+          <ul className='swatch-list1'>
+            {
+              colorArray.map((color,idx) => (
+                <ColorsItem key={idx} id={idx} color={color}/>
+              ))
+            }
+          </ul>
+          <div className='paginate'>1 2 3 4</div>
+        </div>
+
 
       </div>
     )

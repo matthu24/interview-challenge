@@ -17,6 +17,10 @@ class SideBar extends React.Component{
             <li>Orange</li>
             <li>Yellow</li>
             <li>Green</li>
+            <li>Blue</li>
+            <li>Purple</li>
+            <li>Brown</li>
+            <li>Gray</li>
           </ul>
         </div>
 

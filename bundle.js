@@ -18359,7 +18359,7 @@ var App = function App() {
       _reactRouterDom.Switch,
       null,
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _colors_index2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/detail', component: _colors_show2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/detail/:colorId', component: _colors_show2.default })
     )
   );
 };
@@ -25678,16 +25678,20 @@ var ColorsIndex = function (_React$Component) {
         'div',
         { className: 'index1' },
         _react2.default.createElement(
-          'ul',
-          { className: 'swatch-list1' },
-          colorArray.map(function (color, idx) {
-            return _react2.default.createElement(_colors_item2.default, { key: idx, id: idx, color: color });
-          })
-        ),
-        _react2.default.createElement(
           'div',
-          null,
-          '1 2 3 4'
+          { className: 'index1-components' },
+          _react2.default.createElement(
+            'ul',
+            { className: 'swatch-list1' },
+            colorArray.map(function (color, idx) {
+              return _react2.default.createElement(_colors_item2.default, { key: idx, id: idx, color: color });
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'paginate' },
+            '1 2 3 4'
+          )
         )
       );
     }
@@ -25715,6 +25719,8 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(89);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25735,10 +25741,27 @@ var ColorsShow = function (_React$Component) {
   _createClass(ColorsShow, [{
     key: 'render',
     value: function render() {
+      console.log(this.props);
+      var color = '#' + this.props.match.params.colorId;
       return _react2.default.createElement(
         'div',
         { className: 'detail' },
-        'hljlkjlkjlkjlkjlkjlkjljlkjlkji'
+        _react2.default.createElement(
+          'div',
+          { className: 'detail-components' },
+          _react2.default.createElement('div', { className: 'detail-swatch', style: { backgroundColor: color } }),
+          _react2.default.createElement(
+            'div',
+            { className: 'detail-info' },
+            '#',
+            this.props.match.params.colorId
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { className: 'back', to: '/' },
+            'Back'
+          )
+        )
       );
     }
   }]);
@@ -25887,6 +25910,26 @@ var SideBar = function (_React$Component) {
               'li',
               null,
               'Green'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Blue'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Purple'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Brown'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Gray'
             )
           )
         )
@@ -25950,7 +25993,7 @@ var ColorsItem = function (_React$Component) {
         { className: 'swatch-bundle' },
         _react2.default.createElement(
           _reactRouterDom.Link,
-          { to: '/detail' },
+          { params: { testvalue: "hello" }, to: '/detail/' + this.props.color },
           _react2.default.createElement('div', { style: { backgroundColor: color }, className: 'swatch-item' }),
           _react2.default.createElement(
             'div',
