@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorsShow from './colors_show';
+import ColorsItem from './colors_item';
 
 class ColorsIndex extends React.Component{
   constructor(props){
@@ -16,7 +16,7 @@ class ColorsIndex extends React.Component{
         <ul className='swatch-list1'>
           {
             colorArray.map((color,idx) => (
-              <ColorsShow key={idx} color={color}/>
+              <ColorsItem key={idx} id={idx} color={color}/>
             ))
           }
         </ul>

@@ -18355,8 +18355,12 @@ var App = function App() {
     null,
     _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _nav2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _side_bar2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _colors_index2.default }),
-    _react2.default.createElement(_reactRouterDom.Switch, null)
+    _react2.default.createElement(
+      _reactRouterDom.Switch,
+      null,
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _colors_index2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/detail', component: _colors_show2.default })
+    )
   );
 };
 
@@ -25641,9 +25645,9 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _colors_show = __webpack_require__(118);
+var _colors_item = __webpack_require__(121);
 
-var _colors_show2 = _interopRequireDefault(_colors_show);
+var _colors_item2 = _interopRequireDefault(_colors_item);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25677,7 +25681,7 @@ var ColorsIndex = function (_React$Component) {
           'ul',
           { className: 'swatch-list1' },
           colorArray.map(function (color, idx) {
-            return _react2.default.createElement(_colors_show2.default, { key: idx, color: color });
+            return _react2.default.createElement(_colors_item2.default, { key: idx, id: idx, color: color });
           })
         ),
         _react2.default.createElement(
@@ -25728,24 +25732,13 @@ var ColorsShow = function (_React$Component) {
     return _possibleConstructorReturn(this, (ColorsShow.__proto__ || Object.getPrototypeOf(ColorsShow)).call(this, props));
   }
 
-  // componentDidMount(){
-  //   const swatchItem = document.querySelectorALL('.swatch-item');
-  //   swatchItem.style.color = 'red';
-  // }
-
   _createClass(ColorsShow, [{
     key: 'render',
     value: function render() {
-      var color = '#' + this.props.color;
       return _react2.default.createElement(
         'div',
-        { className: 'swatch-bundle' },
-        _react2.default.createElement('div', { style: { backgroundColor: color }, className: 'swatch-item' }),
-        _react2.default.createElement(
-          'div',
-          { className: 'swatch-name' },
-          color
-        )
+        { className: 'detail' },
+        'hljlkjlkjlkjlkjlkjlkjljlkjlkji'
       );
     }
   }]);
@@ -25905,6 +25898,74 @@ var SideBar = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = SideBar;
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(89);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ColorsItem = function (_React$Component) {
+  _inherits(ColorsItem, _React$Component);
+
+  function ColorsItem(props) {
+    _classCallCheck(this, ColorsItem);
+
+    return _possibleConstructorReturn(this, (ColorsItem.__proto__ || Object.getPrototypeOf(ColorsItem)).call(this, props));
+  }
+
+  // componentDidMount(){
+  //   const swatchItem = document.querySelectorALL('.swatch-item');
+  //   swatchItem.style.color = 'red';
+  // }
+
+  _createClass(ColorsItem, [{
+    key: 'render',
+    value: function render() {
+      var color = '#' + this.props.color;
+      var id = this.props.id;
+      return _react2.default.createElement(
+        'div',
+        { className: 'swatch-bundle' },
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/detail' },
+          _react2.default.createElement('div', { style: { backgroundColor: color }, className: 'swatch-item' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'swatch-name' },
+            color
+          )
+        )
+      );
+    }
+  }]);
+
+  return ColorsItem;
+}(_react2.default.Component);
+
+exports.default = ColorsItem;
 
 /***/ })
 /******/ ]);

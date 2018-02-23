@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ColorsShow from './colors_show';
+import ColorsItem from './colors_item';
 
 const mapStateToProps = (state,{color,id}) => ({
   color,
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ColorsShow);
+)(ColorsItem);
