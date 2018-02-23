@@ -14,11 +14,17 @@ class ColorsShow extends React.Component{
   render(){
     let color = '#' + this.props.color;
     return(
-      <div style={{backgroundColor:color}} className='swatch-item'>
+      <div className='swatch-bundle'>
+        <div style={{backgroundColor:color}} className='swatch-item'>
 
-        &nbsp;
 
+
+        </div>
+        <div className='swatch-name'>
+          {color}
+        </div>
       </div>
+
     )
 
   }

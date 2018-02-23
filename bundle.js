@@ -25739,8 +25739,13 @@ var ColorsShow = function (_React$Component) {
       var color = '#' + this.props.color;
       return _react2.default.createElement(
         'div',
-        { style: { backgroundColor: color }, className: 'swatch-item' },
-        '\xA0'
+        { className: 'swatch-bundle' },
+        _react2.default.createElement('div', { style: { backgroundColor: color }, className: 'swatch-item' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'swatch-name' },
+          color
+        )
       );
     }
   }]);
