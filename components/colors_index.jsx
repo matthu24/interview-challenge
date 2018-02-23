@@ -1,4 +1,5 @@
 import React from 'react';
+import ColorsShow from './colors_show';
 
 class ColorsIndex extends React.Component{
   constructor(props){
@@ -12,10 +13,15 @@ class ColorsIndex extends React.Component{
     }
     return(
       <div className='index1'>
-        &nbsp;
-        <ul>
-
+        <ul className='swatch-list1'>
+          {
+            colorArray.map((color,idx) => (
+              <ColorsShow color={color}/>
+            ))
+          }
         </ul>
+        <div>1 2 3 4</div>
+
       </div>
     )
   }

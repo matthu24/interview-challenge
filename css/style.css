@@ -31,11 +31,24 @@ body{
 
 .side-bar{
   display: inline-block;
+  position: absolute;
   width: 20vw;
   height: 94vh;
   background-color: lightgray;
   border: 1px solid red;
 
+}
+
+
+.index1{
+  display: inline-block;
+  position: relative;
+  margin-left: 20%;
+  border: 1px solid red;
+  height: 94vh;
+  width: 79vw;
+  /*margin-top: -30px;*/
+  /*width: 100%;*/
 }
 
 .side-bar-components{
@@ -50,7 +63,18 @@ body{
 li{
   list-style: none;
   margin-bottom: 20px;
+
 }
+
+.swatch-list1{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.swatch-item{
+  margin: 50px;
+}
+
 .sidebar-list{
   width: 60%;
   /*border:1px solid black;*/
@@ -73,6 +97,6 @@ button{
   border: 1px solid red;
   height: 80vh;
   width: 79vw;
-  margin-top: -30px;
+  /*margin-top: -30px;*/
   /*width: 100%;*/
 }
