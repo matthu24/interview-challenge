@@ -16,7 +16,7 @@ class ColorsIndex extends React.Component{
         <ul className='swatch-list1'>
           {
             colorArray.map((color,idx) => (
-              <ColorsShow color={color}/>
+              <ColorsShow key={idx} color={color}/>
             ))
           }
         </ul>
