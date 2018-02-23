@@ -25666,7 +25666,7 @@ var ColorsIndex = function (_React$Component) {
     key: 'render',
     value: function render() {
       var colorArray = [];
-      for (var i = 0; i < 16; i++) {
+      for (var i = 0; i < 12; i++) {
         var randomColor = Math.floor(Math.random() * 16777215).toString(16);
         colorArray.push(randomColor);
       }
@@ -25711,11 +25711,12 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
+exports.default = function (props) {
+
   return _react2.default.createElement(
     'div',
     { className: 'swatch-item' },
-    'hello?'
+    props.color
   );
 };
 

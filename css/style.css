@@ -62,7 +62,7 @@ body{
 
 li{
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
 }
 
@@ -72,7 +72,10 @@ li{
 }
 
 .swatch-item{
-  margin: 50px;
+  padding: 50px;
+  padding-bottom: 60px;
+  margin: 20px;
+  border: 1px solid gray;
 }
 
 .sidebar-list{

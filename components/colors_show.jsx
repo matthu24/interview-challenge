@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default () => {
+export default props => {
+
   return(
     <div className='swatch-item'>
-      hello?
+  
+      {props.color}
     </div>
   )
 }

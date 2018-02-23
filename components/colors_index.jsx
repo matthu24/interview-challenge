@@ -7,7 +7,7 @@ class ColorsIndex extends React.Component{
   }
   render(){
     let colorArray = [];
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < 12; i++) {
       let randomColor = Math.floor(Math.random()*16777215).toString(16);
       colorArray.push(randomColor);
     }
